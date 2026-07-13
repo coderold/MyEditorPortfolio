@@ -983,8 +983,8 @@ function AboutContact() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
             {[
-              "I’m Jeff—a 21-year-old, Manila-based video editor and Computer Science undergraduate obsessed with the invisible architecture of a great cut. My passion for directing and filmmaking started back in the 6th grade, evolving into a decade-long journey of turning raw footage into high-impact visual stories.",
-              "My editorial philosophy centers on precision, rhythm, and intention. With storytelling and VFX as my main fortes, I don't just cut to fill time—I cut to direct attention and elevate the visual scale of a project. Whether it’s a fast-paced ad or a narrative short, every single frame is engineered to serve the story.",
+              "I’m Matthew, a 21-year-old Manila-based video editor and Computer Science undergraduate obsessed with the invisible architecture of a great cut. My passion for directing and filmmaking started back in the 6th grade, evolving into a decade-long journey of turning raw footage into high-impact visual stories.",
+              "My editorial philosophy centers on precision, rhythm, and intention. With storytelling and VFX as my main fortes, I don't just cut to fill time, I cut to direct attention and elevate the visual scale of a project. Whether it’s a fast-paced ad or a narrative short, every single frame is engineered to serve the story.",
               "I’ve been refining my craft in Premiere Pro and After Effects since the 7th grade, balancing my technical background with years of contract-based freelance commissions. I deliver fast without sacrificing the art, handling everything from complex VFX compositing to color-graded, sound-designed final deliverables."
             ].map((text, i) => (
               <p key={i} style={{ fontSize: 15, lineHeight: 1.85, color: 'var(--muted)', fontWeight: 300 }}>
