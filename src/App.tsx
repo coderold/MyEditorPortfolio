@@ -10,6 +10,7 @@ const PROJECTS = [
     title: 'Obsesyon Teaser Ad',
     category: 'Ad',
     desc: 'A commissioned teaser ad for Obsesyon Clothing Brand. Cut to build brand identity, tension, and excitement through sharp, rhythmic pacing.',
+    tools: ['Premiere Pro', 'After Effects'],
     photo: '1536240478700-b869ad10a2eb',
     videoId: 'a8N2J-FZ9mQ' as string | undefined,
   },
