@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,900&family=Inter:wght@300;400;500;600&display=swap');
+@import 'tailwindcss';
+
+/* ── CSS Custom Properties ─────────────────────────────────────────────────── */
+
+:root {
+  --bg:          #F9F9F9;
+  --bg2:         #F0F0F0;
+  --card:        #FFFFFF;
+  --border:      #E2E2E2;
+  --text:        #111111;
+  --muted:       #666666;
+  --accent:      #FF3E3E;
+  --accent-glow: rgba(255, 62, 62, 0.22);
+  --accent-dim:  rgba(255, 62, 62, 0.10);
+  --nav-blur:    rgba(249, 249, 249, 0.85);
+  --shadow-card: 0 2px 16px rgba(0,0,0,0.06);
+  --shadow-lift: 0 20px 60px rgba(0,0,0,0.14);
+}
+
+.dark {
+  --bg:          #0D0D0D;
+  --bg2:         #131313;
+  --card:        #1A1A1A;
+  --border:      #272727;
+  --text:        #FFFFFF;
+  --muted:       #A0A0A0;
+  --accent:      #FF3E3E;
+  --accent-glow: rgba(255, 62, 62, 0.28);
+  --accent-dim:  rgba(255, 62, 62, 0.12);
+  --nav-blur:    rgba(13, 13, 13, 0.88);
+  --shadow-card: 0 2px 16px rgba(0,0,0,0.5);
+  --shadow-lift: 0 20px 60px rgba(0,0,0,0.7);
+}
+
+/* ── Reset & Base ──────────────────────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+/* ── Typography helpers ────────────────────────────────────────────────────── */
+
+.font-display { font-family: 'Montserrat', sans-serif; }
+
+/* ── Ticker / Marquee ──────────────────────────────────────────────────────── */
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+
+.ticker-track:hover { animation-play-state: paused; }
+
+/* ── Grain overlay ─────────────────────────────────────────────────────────── */
+
+.grain-wrap::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px;
+}
+
+/* ── Responsive breakpoints ────────────────────────────────────────────────── */
+
+/* NAV */
+@media (max-width: 640px) {
+  .nav-links { display: none !important; }
+  .nav-wrap  { padding: 0 20px !important; }
+}
+
+/* HERO */
+@media (max-width: 900px) {
+  .hero-grid      { grid-template-columns: 1fr !important; }
+  .hero-text      { padding-top: 0 !important; }
+  .hero-frame     { display: none !important; }
+  .hero-headline  { font-size: clamp(52px, 13vw, 88px) !important; }
+  .hero-section   { padding: 100px 20px 280px !important; }
+  .hero-cta-row   { flex-wrap: wrap; gap: 12px !important; }
+
+  /* On mobile the portrait fills the bottom 260px via absolute, fading up */
+  .hero-section > div[aria-hidden],
+  .hero-section > div:not([class]) {
+    width: 100% !important;
+    height: 320px !important;
+    top: auto !important;
+    bottom: 0 !important;
+  }
+  .hero-section > div:not([class]) img {
+    object-position: center 20% !important;
+  }
+  /* Override gradients for mobile: fade from bottom instead of side */
+  .hero-section > div:not([class]) > div:first-of-type {
+    background: linear-gradient(to bottom, var(--bg) 0%, transparent 40%) !important;
+  }
+  .hero-section > div:not([class]) > div:nth-of-type(2) {
+    background: linear-gradient(to top, var(--bg) 0%, transparent 60%) !important;
+  }
+}
+
+/* WORKS */
+@media (max-width: 1100px) {
+  .works-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 640px) {
+  .works-grid    { grid-template-columns: 1fr !important; }
+  .works-section { padding: 80px 20px !important; }
+  .section-pad   { padding-left: 20px !important; padding-right: 20px !important; }
+}
+
+/* ABOUT / CONTACT */
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr !important; gap: 56px !important; }
+}
+@media (max-width: 640px) {
+  .about-section { padding: 80px 20px !important; }
+}
+
+/* FOOTER */
+@media (max-width: 640px) {
+  .footer-inner { flex-direction: column !important; gap: 8px !important; text-align: center; }
+  .footer-wrap  { padding: 32px 20px !important; }
+}

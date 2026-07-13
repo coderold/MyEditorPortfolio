@@ -1,0 +1,10 @@
+{
+  "description": "Showcase your video editing expertise with a sleek, cinematic portfolio website designed for professionals, featuring responsive layouts and dark/light mode.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
