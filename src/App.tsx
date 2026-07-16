@@ -25,6 +25,15 @@ const PROJECTS = [
   },
   {
     id: 3,
+    title: 'Monarch UGC Video Reels',
+    category: 'UGC / Vlog',
+    desc: 'A clean, modern lifestyle product review optimized for high-retention social media engagement. Features seamless motion graphic overlays, tailored sound design, and a highly polished, distraction-free aesthetic.',
+    tools: ['Premiere Pro', 'After Effects'],
+    photo: '1574717024653-61fd2cf4d44d',
+    videoId: 'OZJI14Ob5oU' as string | undefined,
+  },
+  {
+    id: 4,
     title: 'KitKat Ad (School Project)',
     category: 'Ad',
     desc: 'A dynamic school project showcasing advanced VFX and compositing skills to deliver an energetic, high-impact commercial concept for KitKat.',
@@ -33,22 +42,13 @@ const PROJECTS = [
     videoId: 'Fz_5uuO5CVw' as string | undefined,
   },
   {
-    id: 4,
+    id: 5,
     title: '2024 Sample Reel',
     category: 'Motion Graphics',
     desc: 'A curated compilation of creative cuts and random cinematic clips demonstrating versatility in pacing, transitions, and style throughout 2024.',
     tools: ['Premiere Pro', 'After Effects'],
     photo: '1558618666-fcd25c85cd64',
     videoId: 'u7s--nNa7QE' as string | undefined,
-  },
-  {
-    id: 5,
-    title: 'Day Vlog',
-    category: 'Vlog',
-    desc: 'A casual, lifestyle-focused day vlog edited for clean continuity, engaging pacing, and a natural, relatable storytelling flow.',
-    tools: ['Premiere Pro'],
-    photo: '1511671001595-f2e4d7d19e12',
-    videoId: '-_fSOsLHBBw' as string | undefined,
   },
   {
     id: 6,
@@ -59,6 +59,25 @@ const PROJECTS = [
     photo: '1611532736597-de2d4265fba3',
     videoId: 'eXJIzCRvBFM' as string | undefined,
   },
+  {
+    id: 7,
+    title: 'After School Vlog Montage',
+    category: 'Vlog / Lifestyle',
+    desc: 'A high-energy, cinematic lifestyle vlog utilizing rhythmic beat-matching and dynamic pacing. Combines fast-tempo transitions and engaging visual cuts to turn everyday moments into an exciting, stylized story.',
+    tools: ['Premiere Pro'],
+    photo: '1511671001595-f2e4d7d19e12',
+    videoId: 'Gwn3XLjHTz4' as string | undefined,
+  },
+  {
+    id: 8,
+    title: 'Day Vlog',
+    category: 'Vlog',
+    desc: 'A casual, lifestyle-focused day vlog edited for clean continuity, engaging pacing, and a natural, relatable storytelling flow.',
+    tools: ['Premiere Pro'],
+    photo: '1511671001595-f2e4d7d19e12',
+    videoId: '-_fSOsLHBBw' as string | undefined,
+  },
+  
 ]
 
 const SOCIALS = [
